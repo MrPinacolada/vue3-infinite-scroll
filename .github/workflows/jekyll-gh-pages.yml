@@ -1,26 +1,21 @@
 name: Deploy Vue Site with GitHub Pages
 
 on:
-  # Запускать при пушах в ветку main
   push:
     branches: ["main"]
 
-  # Позволяет запускать workflow вручную из вкладки Actions
   workflow_dispatch:
 
-# Устанавливаем разрешения для GITHUB_TOKEN для деплоя на GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Ограничиваем одновременные деплои, пропуская промежуточные задачи
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Сборка проекта
   build:
     runs-on: ubuntu-latest
     steps:
@@ -30,13 +25,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "22"
 
       - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
+
+      - name: Generate Documentation
+        run: npm run docs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -50,7 +48,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
-  # Деплой на GitHub Pages
   deploy:
     environment:
       name: github-pages
