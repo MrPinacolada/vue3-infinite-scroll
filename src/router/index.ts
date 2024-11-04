@@ -4,8 +4,8 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/docs",
-      redirect: "/docs/index.html",
+      path: "/vue3-infinite-scroll/docs",
+      redirect: "/vue3-infinite-scroll/docs/index.html",
       
     },
   ],

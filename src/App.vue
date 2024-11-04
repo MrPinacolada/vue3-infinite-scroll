@@ -1,6 +1,6 @@
 <template>
   <main class="users">
-    <router-link class="docs-butt" target="_blank" to="/docs">go see docs</router-link>
+    <router-link class="docs-butt" target="_blank" to="/vue3-infinite-scroll/docs">go see docs</router-link>
     <!-- User cards displayed here -->
     <section ref="scrollContainer" class="users__container">
       <user-card v-for="user in users" :key="user.email" :user="user" />
