@@ -1,6 +1,6 @@
 <template>
   <main class="users">
-    <button class="docs-butt">asda</button>
+    <router-link class="docs-butt" target="_blank" to="/docs">go see docs</router-link>
     <!-- User cards displayed here -->
     <section ref="scrollContainer" class="users__container">
       <user-card v-for="user in users" :key="user.email" :user="user" />
@@ -88,6 +88,17 @@ onUnmounted(() => {
   height: 100dvh;
   padding: 50px;
   overflow: hidden;
+  .docs-butt {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #d54ca0;
+    border-radius: 12px;
+    padding: 10px;
+  }
   &__container {
     position: relative;
     display: grid;
