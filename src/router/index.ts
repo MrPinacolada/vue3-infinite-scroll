@@ -6,6 +6,9 @@ const router = createRouter({
     {
       path: "/docs",
       redirect: "/docs/index.html",
+      beforeEnter() {
+        window.location.href = '/docs/index.html'; 
+      },
     },
   ],
 });
