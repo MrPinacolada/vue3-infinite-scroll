@@ -96,7 +96,7 @@ onUnmounted(() => {
     width: 100%;
     height: 100%;
     max-height: 600px;
-    max-width: 50%;
+    max-width: 1000px;
     overflow-y: auto;
     .loader {
       grid-column: 1 / -1;
