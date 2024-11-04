@@ -32,7 +32,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-
+      # assuming we can get them in running app
       - name: Generate Documentation
         run: npm run docs
 
