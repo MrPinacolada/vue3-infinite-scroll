@@ -9,7 +9,7 @@
         "includePattern": "\\.(jsx|js|ts|tsx)$"
     },
     "opts": {
-        "destination": "./docs",
+        "destination": "./public/docs",
         "recurse": true,
         "pedantic": true,
         "template": "node_modules/better-docs"
