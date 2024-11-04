@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite"
+    "dev": "vite",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
+    "better-docs": "^2.7.3",
+    "jsdoc": "^4.0.4",
     "sass": "^1.80.6",
     "typescript": "^5.6.3"
   }
